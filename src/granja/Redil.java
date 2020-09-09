@@ -31,6 +31,8 @@ public class Redil {
                 mostrarMensajeSacar(pastoreable);
                 pastoreable.setEnRedil(false);
                 return (Gallina)this.animalesRedil.remove(this.animalesRedil.indexOf(pastoreable));
+            }else{
+                System.out.println("No hay gallinas");
             }
 
         }
@@ -45,6 +47,8 @@ public class Redil {
                 mostrarMensajeSacar(pastoreable);
                 pastoreable.setEnRedil(false);
                 return (Vaca)this.animalesRedil.remove(this.animalesRedil.indexOf(pastoreable));
+            }else{
+                System.out.println("No hay vacas");
             }
 
         }

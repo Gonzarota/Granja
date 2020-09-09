@@ -46,7 +46,6 @@ public class Granja {
     public void vueltaDelPastoreoVaca(){
         Vaca vaca=redil.sacarVaca();
 
-
         mostrarMensajeTraslado(vaca);
 
         establo.añadirAnimal(vaca);

@@ -21,11 +21,16 @@ public class Gallinero {
             System.out.println("No hay animales");
         }else{
             animalesGallinero.remove(animal);
+            mostrarMensajeSacar(animal);
         }
     }
 
     public void mostrarMensajeAñadir(Ave ave){
-        System.out.println("Has añadido: "+ ave.getTipo()+" "+ ave.getNombre());
+        System.out.println("Has añadido al gallinero: "+ ave.getTipo()+" "+ ave.getNombre());
+    }
+
+    public void mostrarMensajeSacar(Ave ave){
+        System.out.println("Has sacado del gallinero: "+ ave.getTipo()+" "+ ave.getNombre());
     }
 
     public void takeEggs(){
@@ -43,7 +48,8 @@ public class Gallinero {
                 numeroGallinas++;
             }
         }
-        return numeroGallinas;
+        System.out.println("nº de gallinas en gallinero: ");
+        return  numeroGallinas;
     }
 
     public int getNumeroDePavos(){

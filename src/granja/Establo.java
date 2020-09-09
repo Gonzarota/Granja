@@ -4,6 +4,7 @@ import animales.enEstablo.Buey;
 import animales.enEstablo.Caballo;
 import animales.enEstablo.Estabulable;
 import animales.enEstablo.Vaca;
+import animales.enGallinero.Ave;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +16,9 @@ public class Establo {
 
 
     public void añadirAnimal(Estabulable animal){
-        if (animalesEstablo.size()>=NUMERO_DE_MAMIFEROS){
+        if (animalesEstablo.size()<5){
             animalesEstablo.add(animal);
+            mostrarMensajeAñadir(animal);
         }else{
             System.out.println("No caben más");
         }
@@ -27,6 +29,7 @@ public class Establo {
             System.out.println("No hay animales");
         }else{
             animalesEstablo.remove(animal);
+            mostrarMensajeSacar(animal);
         }
     }
 
@@ -58,6 +61,14 @@ public class Establo {
             }
         }
         return numeroCaballos;
+    }
+
+    public void mostrarMensajeAñadir(Estabulable estabulable){
+        System.out.println("Has añadido al establo: "+ estabulable.getTipo()+" "+ estabulable.getNombre());
+    }
+
+    public void mostrarMensajeSacar(Estabulable estabulable){
+        System.out.println("Has sacado del establo: "+ estabulable.getTipo()+" "+ estabulable.getNombre());
     }
 }
 
